@@ -15,7 +15,8 @@
   },
   "buildOptions": {
     "warningsAsErrors": true,
-    "allowUnsafe": true
+    "allowUnsafe": true,
+    "keyFile": "../../tools/Key.snk"
   },
   "frameworks": {
     "net451": {
