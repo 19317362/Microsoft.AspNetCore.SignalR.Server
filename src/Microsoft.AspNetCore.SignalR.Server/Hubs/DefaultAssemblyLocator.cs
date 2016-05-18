@@ -33,6 +33,7 @@ namespace Microsoft.AspNetCore.SignalR.Hubs
             return _dependencyContext
                 .RuntimeLibraries
                 .Where(IsCandidateLibrary)
+                .SelectMany(l => l.GetDefaultAssemblyNames(_dependencyContext))
                 .Select(assembly => Assembly.Load(new AssemblyName(assembly.Name)))
                 .ToArray();
         }
